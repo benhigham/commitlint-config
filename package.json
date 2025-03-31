@@ -3,7 +3,14 @@
   "version": "0.1.0",
   "description": "My personal commitlint configuration based on the Conventional Commits standard.",
   "license": "MIT",
-  "repository": "benhigham/commitlint-config",
+  "homepage": "https://github.com/benhigham/commitlint-config#readme",
+  "bugs": {
+    "url": "https://github.com/benhigham/commitlint-config/issues/new"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/benhigham/commitlint-config.git"
+  },
   "author": {
     "name": "Ben Higham",
     "url": "https://benhigham.com"
