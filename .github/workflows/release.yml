@@ -3,7 +3,7 @@ name: Release
 on:
   workflow_run:
     workflows: ['Main']
-    branches: [$default-branch]
+    branches: [main]
     types:
       - completed
 
