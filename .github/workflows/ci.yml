@@ -1,0 +1,41 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read # to fetch code (actions/checkout)
+
+jobs:
+  setup:
+    name: Setup environment
+    uses: benhigham/.github/.github/workflows/setup-node.yml@main
+    with:
+      fetch-depth: 0
+
+  commitlint:
+    name: Lint commit messages
+    needs: setup
+    uses: benhigham/.github/.github/workflows/lint-commitlint.yml@main
+
+  dependency-review:
+    needs: setup
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Dependency Review'
+        uses: actions/dependency-review-action@v4
+
+  prettier:
+    name: Check code formatting
+    needs: setup
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run format check
+        run: pnpm run format:check
