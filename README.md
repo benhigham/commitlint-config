@@ -1,5 +1,9 @@
 # `@benhigham/commitlint-config`
 
+[![npm version](https://img.shields.io/npm/v/@benhigham/commitlint-config.svg)](https://www.npmjs.com/package/@benhigham/commitlint-config)
+[![npm downloads](https://img.shields.io/npm/dm/@benhigham/commitlint-config.svg)](https://www.npmjs.com/package/@benhigham/commitlint-config)
+[![License](https://img.shields.io/github/license/benhigham/commitlint-config)](LICENSE.md)
+
 My personal [commitlint](https://commitlint.js.org) configuration based on the [Conventional Commits](https://www.conventionalcommits.org/) standard.
 
 ## Features
@@ -8,11 +12,6 @@ My personal [commitlint](https://commitlint.js.org) configuration based on the [
 - Provides consistent, structured commit messages
 - Integrates with Atom-style changelogs
 - Pre-configured formatting rules
-
-## Requirements
-
-- [commitlint](https://commitlint.js.org)
-- Node.js >= 18.20.0 (with ESM support)
 
 ## Installation
 
@@ -29,18 +28,21 @@ pnpm add --save-dev @benhigham/commitlint-config
 
 ## Usage
 
-Add to your commitlint configuration:
+Use in `commitlint.config.js`:
 
 ```js
-// commitlint.config.js
-export default {
+/** @type {import('@commitlint/types').UserConfig} */
+const config = {
   extends: ['@benhigham/commitlint-config'],
+  // your overrides here
 };
+
+export default config;
 ```
 
 ### With Git Hooks
 
-For the best experience, use with [husky](https://github.com/typicode/husky) or [lefthook](https://github.com/evilmartians/lefthook) to enforce commit message formatting:
+For the best experience, use with [lefthook](https://github.com/evilmartians/lefthook) or [husky](https://github.com/typicode/husky) to enforce commit message formatting:
 
 #### Example with lefthook
 
@@ -87,14 +89,11 @@ This configuration enforces the [Conventional Commits](https://www.conventionalc
 - `chore`: Other changes that don't modify src or test files
 - `revert`: Reverts a previous commit
 
-## Development
+## Requirements
 
-This project uses:
-
-- [pnpm](https://pnpm.io/) for package management
-- [Changesets](https://github.com/changesets/changesets) for versioning and changelogs
-- [Lefthook](https://github.com/evilmartians/lefthook) for Git hooks
+- Node.js 18.20.x or higher
+- [commitlint](https://commitlint.js.org) 19.x
 
 ## License
 
-[MIT](LICENSE.md)
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
