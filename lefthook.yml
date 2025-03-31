@@ -6,15 +6,6 @@ pre-commit:
       run: pnpm exec prettier --write {staged_files}
       stage_fixed: true
 
-# Build commit message interactively
-prepare-commit-msg:
-  commands:
-    prompt:
-      interactive: true
-      run: pnpm exec commit
-      env:
-        LEFTHOOK: 0
-
 # Validate commit message
 commit-msg:
   commands:
