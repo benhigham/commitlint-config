@@ -1,6 +1,6 @@
 {
   "name": "@benhigham/commitlint-config",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "My personal commitlint configuration based on the Conventional Commits standard.",
   "license": "MIT",
   "homepage": "https://github.com/benhigham/commitlint-config#readme",
