@@ -1,5 +1,11 @@
 # @benhigham/commitlint-config
 
+## 0.1.2
+
+### Patch Changes
+
+- [`e49c480`](https://github.com/benhigham/commitlint-config/commit/e49c480b659a99366ec24e4bfb812edb520034a7) Thanks [@benhigham](https://github.com/benhigham)! - Disable body-max-line-length rule
+
 ## 0.1.1
 
 ### Patch Changes
