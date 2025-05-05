@@ -1,5 +1,11 @@
 # @benhigham/commitlint-config
 
+## 0.1.3
+
+### Patch Changes
+
+- [`2536cdf`](https://github.com/benhigham/commitlint-config/commit/2536cdfbdc6b5c0cc878f85159fa9277f6abcef7) Thanks [@benhigham](https://github.com/benhigham)! - Bump dependencies
+
 ## 0.1.2
 
 ### Patch Changes
