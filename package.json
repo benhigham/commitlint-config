@@ -21,9 +21,9 @@
   "exports": "./src/index.js",
   "sideEffects": false,
   "engines": {
-    "node": "^18.20.0 || ^20.10.0 || >=21.0.0"
+    "node": "^18.20.0 || ^20.19.0 || >=22.15.0"
   },
-  "packageManager": "pnpm@10.8.0",
+  "packageManager": "pnpm@10.10.0",
   "scripts": {
     "format": "prettier --write .",
     "format:check": "prettier --check .",
@@ -64,15 +64,15 @@
     "workflow"
   ],
   "dependencies": {
-    "@commitlint/config-conventional": "^19.8.0",
-    "@commitlint/format": "^19.8.0",
+    "@commitlint/config-conventional": "^19.8.1",
+    "@commitlint/format": "^19.8.1",
     "conventional-changelog-atom": "^5.0.0"
   },
   "devDependencies": {
     "@changesets/changelog-github": "^0.5.1",
     "@changesets/cli": "^2.29.3",
-    "@commitlint/cli": "^19.8.0",
-    "@commitlint/types": "^19.8.0",
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/types": "^19.8.1",
     "lefthook": "^1.11.12",
     "prettier": "^3.5.3"
   },

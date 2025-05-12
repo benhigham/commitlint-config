@@ -7,8 +7,6 @@ updates:
       interval: 'weekly'
     assignees:
       - 'benhigham'
-    reviewers:
-      - 'benhigham'
     commit-message:
       prefix: 'build'
       include: 'scope'
@@ -19,8 +17,6 @@ updates:
     schedule:
       interval: 'weekly'
     assignees:
-      - 'benhigham'
-    reviewers:
       - 'benhigham'
     commit-message:
       prefix: 'ci'
