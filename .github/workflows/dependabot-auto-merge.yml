@@ -1,0 +1,9 @@
+name: Auto-merge Dependabot PRs
+
+on:
+  pull_request:
+
+jobs:
+  auto-merge:
+    uses: benhigham/.github/.github/workflows/auto-merge-dependabot.yml@main
+    secrets: inherit
