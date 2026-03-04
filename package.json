@@ -64,7 +64,7 @@
     "workflow"
   ],
   "dependencies": {
-    "@commitlint/config-conventional": "^19.8.1",
+    "@commitlint/config-conventional": "^20.0.0",
     "@commitlint/format": "^19.8.1",
     "conventional-changelog-atom": "^5.0.0"
   },
