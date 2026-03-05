@@ -72,7 +72,7 @@
     "@changesets/changelog-github": "^0.5.1",
     "@changesets/cli": "^2.29.6",
     "@commitlint/cli": "^20.0.0",
-    "@commitlint/types": "^19.8.1",
+    "@commitlint/types": "^20.4.3",
     "lefthook": "^2.0.1",
     "prettier": "^3.6.2"
   },
