@@ -2,16 +2,20 @@ name: Auto-merge Dependabot PRs
 
 on:
   pull_request:
+    types: [opened, reopened]
 
-permissions:
-  contents: write
-  pull-requests: write
+permissions: {}
 
 concurrency:
   group: dependabot-auto-merge-${{ github.event.pull_request.number }}
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   auto-merge:
     if: github.actor == 'dependabot[bot]'
+    permissions:
+      contents: write
+      pull-requests: write
+    # Reusable workflow from benhigham/.github. For debugging failures, see:
+    # https://github.com/benhigham/.github/blob/main/.github/workflows/auto-merge-dependabot.yml
     uses: benhigham/.github/.github/workflows/auto-merge-dependabot.yml@7a1eb9105ae462853ee01a41ad45518b4bae51c9
