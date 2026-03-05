@@ -65,7 +65,7 @@
   ],
   "dependencies": {
     "@commitlint/config-conventional": "^20.0.0",
-    "@commitlint/format": "^19.8.1",
+    "@commitlint/format": "^20.4.3",
     "conventional-changelog-atom": "^5.0.0"
   },
   "devDependencies": {
