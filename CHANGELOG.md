@@ -1,5 +1,11 @@
 # @benhigham/commitlint-config
 
+## 0.2.0
+
+### Minor Changes
+
+- [`3ce1d7a`](https://github.com/benhigham/commitlint-config/commit/3ce1d7a7df38c9d50722fe85fc5d351ad7b374fe) - Bump `@commitlint/config-conventional` and `@commitlint/format` from v19 to v20
+
 ## 0.1.3
 
 ### Patch Changes
