@@ -21,7 +21,7 @@
   "exports": "./src/index.js",
   "sideEffects": false,
   "engines": {
-    "node": "^18.20.0 || ^20.19.0 || >=22.15.0"
+    "node": ">=22.15.0"
   },
   "packageManager": "pnpm@10.15.0",
   "scripts": {
