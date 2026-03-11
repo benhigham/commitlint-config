@@ -91,7 +91,7 @@ This configuration enforces the [Conventional Commits](https://www.conventionalc
 
 ## Requirements
 
-- Node.js 18.20.x or higher
+- Node.js 22.15.x or higher
 - [commitlint](https://commitlint.js.org) 19.x
 
 ## License
