@@ -1,5 +1,34 @@
 # @benhigham/commitlint-config
 
+## 1.0.0
+
+### Major Changes
+
+- [#52](https://github.com/benhigham/commitlint-config/pull/52) [`90c34dd`](https://github.com/benhigham/commitlint-config/commit/90c34ddaf3870a03f5e498a6d3fcf7242488133c) Thanks [@benhigham](https://github.com/benhigham)! - - Drop support for Node.js 18 and 20 — minimum version is now 22
+  - Node 18 reached EOL April 2025; Node 20 EOLs April 2026
+
+- [#53](https://github.com/benhigham/commitlint-config/pull/53) [`71c5c6d`](https://github.com/benhigham/commitlint-config/commit/71c5c6d2667e63ab44e1fc2962344ac40cdc3ddc) Thanks [@benhigham](https://github.com/benhigham)! - - Bump `@commitlint/config-conventional` and `@commitlint/format` from v19 to v20
+  - Bump `@commitlint/cli` peer dependency from `>=19.0.0` to `>=20.0.0`
+  - Update all dependencies to latest versions
+
+### Patch Changes
+
+- [#43](https://github.com/benhigham/commitlint-config/pull/43) [`70f3ac9`](https://github.com/benhigham/commitlint-config/commit/70f3ac9d64c97fed24b6f0c7567161f7c5aee1f6) Thanks [@benhigham](https://github.com/benhigham)! - fix: remove atom parser preset incompatible with commitlint v20
+
+  `parserPreset: 'conventional-changelog-atom'` configured the commit
+  parser to match Atom-style headers (`:emoji: description`), not
+  conventional commits. This was a latent bug that had no visible effect
+  in commitlint v19 due to fallback behaviour in the old parser.
+
+  In commitlint v20, `conventional-commits-parser` was upgraded from
+  v5 to v6 (which uses a new `CommitParser` class with no fallback). The
+  atom preset's header pattern never matches conventional commit messages,
+  causing `type` and `subject` to always be empty — breaking all linting.
+
+  The `extends: ['@commitlint/config-conventional']` preset already
+  provides the correct parser configuration. The atom preset and its
+  `conventional-changelog-atom` dependency are removed.
+
 ## 0.2.0
 
 ### Minor Changes
