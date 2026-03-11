@@ -1,0 +1,22 @@
+name: Auto-merge Dependabot PRs
+
+on:
+  pull_request:
+    types: [opened, reopened, synchronize]
+
+# Requires "Allow auto-merge" enabled in repository settings.
+permissions: {}
+
+# Concurrency is handled by the reusable workflow.
+jobs:
+  auto-merge:
+    # Expected actor for Dependabot PRs. If auto-merges stop firing, verify
+    # this value hasn't changed: https://docs.github.com/en/code-security/dependabot
+    if: github.actor == 'dependabot[bot]'
+    permissions:
+      contents: write
+      pull-requests: write
+    # Reusable workflow from benhigham/.github (pinned to SHA below).
+    # For the source of the pinned version, check the repo at the matching commit.
+    # Latest version: https://github.com/benhigham/.github/blob/main/.github/workflows/auto-merge-dependabot.yml
+    uses: benhigham/.github/.github/workflows/auto-merge-dependabot.yml@0ec9301fc776a5b328077294c3e98ba35cf5baef

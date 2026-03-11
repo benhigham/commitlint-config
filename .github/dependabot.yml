@@ -1,6 +1,5 @@
 version: 2
 updates:
-  # Keep npm dependencies up to date
   - package-ecosystem: 'npm'
     directory: '/'
     schedule:
@@ -10,8 +9,18 @@ updates:
     commit-message:
       prefix: 'build'
       include: 'scope'
+    groups:
+      npm-minor:
+        patterns:
+          - '*'
+        update-types:
+          - 'minor'
+      npm-patch:
+        patterns:
+          - '*'
+        update-types:
+          - 'patch'
 
-  # Keep GitHub Actions up to date
   - package-ecosystem: 'github-actions'
     directory: '/'
     schedule:
@@ -21,3 +30,14 @@ updates:
     commit-message:
       prefix: 'ci'
       include: 'scope'
+    groups:
+      github-actions-minor:
+        patterns:
+          - '*'
+        update-types:
+          - 'minor'
+      github-actions-patch:
+        patterns:
+          - '*'
+        update-types:
+          - 'patch'
