@@ -10,11 +10,15 @@ updates:
       prefix: 'build'
       include: 'scope'
     groups:
-      npm-patch-minor:
+      npm-minor:
         patterns:
           - '*'
         update-types:
           - 'minor'
+      npm-patch:
+        patterns:
+          - '*'
+        update-types:
           - 'patch'
 
   - package-ecosystem: 'github-actions'
@@ -27,9 +31,13 @@ updates:
       prefix: 'ci'
       include: 'scope'
     groups:
-      github-actions:
+      github-actions-minor:
         patterns:
           - '*'
         update-types:
           - 'minor'
+      github-actions-patch:
+        patterns:
+          - '*'
+        update-types:
           - 'patch'
