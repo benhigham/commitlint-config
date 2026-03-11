@@ -11,7 +11,12 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: false
 
-permissions: {}
+permissions:
+  attestations: write # to create attestations (changesets/action)
+  contents: write # to create the release (changesets/action)
+  id-token: write # for npm provenance verification (changesets/action)
+  issues: write # to post issue comments (changesets/action)
+  pull-requests: write # to create the pull request (changesets/action)
 
 jobs:
   release:
