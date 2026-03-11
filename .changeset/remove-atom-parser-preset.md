@@ -9,7 +9,7 @@ parser to match Atom-style headers (`:emoji: description`), not
 conventional commits. This was a latent bug that had no visible effect
 in commitlint v19 due to fallback behaviour in the old parser.
 
-In commitlint v20.4.0, `conventional-commits-parser` was upgraded from
+In commitlint v20, `conventional-commits-parser` was upgraded from
 v5 to v6 (which uses a new `CommitParser` class with no fallback). The
 atom preset's header pattern never matches conventional commit messages,
 causing `type` and `subject` to always be empty — breaking all linting.

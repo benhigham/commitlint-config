@@ -10,7 +10,7 @@ My personal [commitlint](https://commitlint.js.org) configuration based on the [
 
 - Based on `@commitlint/config-conventional`
 - Provides consistent, structured commit messages
-- Integrates with Atom-style changelogs
+- Uses `@commitlint/format` for formatted output
 - Pre-configured formatting rules
 
 ## Installation
@@ -91,8 +91,8 @@ This configuration enforces the [Conventional Commits](https://www.conventionalc
 
 ## Requirements
 
-- Node.js 22.15.x or higher
-- [commitlint](https://commitlint.js.org) 19.x
+- Node.js 22 or higher
+- [commitlint](https://commitlint.js.org) 20.x or higher
 
 ## License
 
