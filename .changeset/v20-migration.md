@@ -1,5 +1,5 @@
 ---
-'@benhigham/commitlint-config': minor
+'@benhigham/commitlint-config': major
 ---
 
 - Bump `@commitlint/config-conventional` and `@commitlint/format` from v19 to v20
