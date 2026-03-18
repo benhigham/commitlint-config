@@ -19,4 +19,4 @@ jobs:
     # Reusable workflow from benhigham/.github (pinned to SHA below).
     # For the source of the pinned version, check the repo at the matching commit.
     # Latest version: https://github.com/benhigham/.github/blob/main/.github/workflows/auto-merge-dependabot.yml
-    uses: benhigham/.github/.github/workflows/auto-merge-dependabot.yml@0ec9301fc776a5b328077294c3e98ba35cf5baef
+    uses: benhigham/.github/.github/workflows/auto-merge-dependabot.yml@62c1f964ae0240e9610912c9ee9f427f3a5383aa
